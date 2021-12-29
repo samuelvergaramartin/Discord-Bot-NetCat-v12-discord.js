@@ -55,11 +55,18 @@ for(var archi6 of archivos6) {
     client.comandos.set(comando.name, comando)
 }
 
+let archivos7 = fs.readdirSync('./commands/comandos_de_diversion').filter((f) => f.endsWith('.js'))
+
+for(var archi7 of archivos7) {
+    let comando = require("./commands/comandos_de_diversion/" + archi7)
+    client.comandos.set(comando.name, comando)
+}
+
 function Presence(){
     client.user.setPresence({
         status: "online",
         activity: {
-            name: "nc/help | NetCat v3.0 | Estoy lista para la acción",
+            name: "nc/help | NetCat v3.2 | Estoy lista para la acción",
             type: "PLAYING",
         }
     })
