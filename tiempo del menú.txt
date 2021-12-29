@@ -1,0 +1,126 @@
+const Discord = require ('discord.js');
+const { MessageMenuOption, MessageMenu } = require ("discord-buttons")
+
+module.exports = {
+    name: "menu",
+    run: async (client, message, args) => {
+
+  const embed = new Discord.MessageEmbed()
+
+  .setTitle('Lista de comandos de NetCat: Menú número 1')
+  .setDescription('Comandos ordenados en 3 columnas con título, de una sola sección')
+  .addField('-----------------------Sección 1-----------------------', 'Listas de comandos de la Sección 1', false)
+  .addField('Lista 1', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 2', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 3', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .setColor('ECFF00')
+  .setFooter('Y aquí el pie de página, #Mariolatenpiedad')
+
+  const embed2 = new Discord.MessageEmbed()
+
+  .setTitle('Lista de comandos de NetCat: Menú número 2')
+  .setDescription('Comandos ordenados en 3 columnas con título, de dos secciones')
+  .addField('-----------------------Sección 1-----------------------', 'Listas de comandos de la Sección 1', false)
+  .addField('Lista 1', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 2', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 3', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .addField('-----------------------Sección 2-----------------------', 'Listas de comandos de la Sección 2', false)
+  .addField('Lista 4', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 5', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 6', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .setColor('00F5FF')
+  .setFooter('Y aquí el pie de página, #Mariolatenpiedad')
+
+  const embed3 = new Discord.MessageEmbed()
+
+  .setTitle('Lista de comandos de NetCat: Menú número 3')
+  .setDescription('Comandos ordenados en 3 columnas con título, de tres secciones')
+  .addField('-----------------------Sección 1-----------------------', 'Listas de comandos de la Sección 1', false)
+  .addField('Lista 1', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 2', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 3', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .addField('-----------------------Sección 2-----------------------', 'Listas de comandos de la Sección 2', false)
+  .addField('Lista 4', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 5', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 6', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .addField('-----------------------Sección 3-----------------------', 'Listas de comandos de la Sección 3', false)
+  .addField('Lista 7', 'comando 1\ncomando 2\ncomando 3\ncomando 4', true)
+  .addField('Lista 8', 'comando 5\ncomando 6\ncomando 7\ncomando 8', true)
+  .addField('Lista 9', 'comando 9\ncomando 10\ncomando 11\ncomando 12', true)
+  .setColor('3FFF00')
+  .setFooter('Y aquí el pie de página, #Mariolatenpiedad')
+
+  const embedprincipal = new Discord.MessageEmbed()
+
+  .setTitle("__Menú principal__:")
+  .setDescription("Hola! Este es el menú principal de NetCat, para ver todos mis comandos , por favor, haga click en la barra de abajo y seleccione el menú que desee consultar. Miau miau 😺😺")
+  .setColor('ff00d9')
+
+  let opcion1 = new MessageMenuOption()
+
+  .setEmoji("1️⃣")
+  .setValue("1")
+  .setLabel("Menú de comandos número 1")
+  .setDescription("Se muestra el listado de comandos del menú número 1")
+
+  let opcion2 = new MessageMenuOption()
+
+  .setEmoji("2️⃣")
+  .setValue("2")
+  .setLabel("Menú de comandos número 2")
+  .setDescription("Se muestra el listado de comandos del menú número 2")
+
+  let opcion3 = new MessageMenuOption()
+
+  .setEmoji("3️⃣")
+  .setValue("3")
+  .setLabel("Menú de comandos número 3")
+  .setDescription("Se muestra el listado de comandos del menú número 3")
+
+  let opcion4 = new MessageMenuOption()
+
+  .setEmoji("◀️")
+  .setValue("4")
+  .setLabel("Menú principal")
+  .setDescription("Regresa al menú principal")
+
+  let menu = new MessageMenu()
+
+  .setID("98")
+  .setPlaceholder("Haz click aquí para desplegar el listado de menús")
+  .addOption(opcion1)
+  .addOption(opcion2)
+  .addOption(opcion3)
+  .addOption(opcion4)
+  
+  const msg = await message.channel.send(embedprincipal, menu)
+
+  const filter = (menu) => menu.clicker.id === message.author.id;
+  const collector = msg.createMenuCollector(filter, { time: 30000 })
+
+  collector.on('collect', async (menu) => {
+    if(menu.values[0] === '1') {
+        menu.reply.defer()
+        return menu.message.edit(embed)
+    } else if(menu.values[0] === '2') {
+        menu.reply.defer()
+        return menu.message.edit(embed2)
+    } else if(menu.values[0] === '3') {
+        menu.reply.defer()
+        return menu.message.edit(embed3)
+    } else if(menu.values[0] === '4') {
+        menu.reply.defer()
+        return menu.message.edit(embedprincipal)
+    } else{
+      collector.stop()
+      message.delete
+    }
+  })
+
+  collector.on("end", async (menu)=> { 
+    message.delete()
+    })
+
+}
+
+}
