@@ -62,6 +62,13 @@ for(var archi7 of archivos7) {
     client.comandos.set(comando.name, comando)
 }
 
+let archivos8 = fs.readdirSync('./commands/comandos_de_chistes').filter((f) => f.endsWith('.js'))
+
+for(var archi8 of archivos8) {
+    let comando = require("./commands/comandos_de_chistes/" + archi8)
+    client.comandos.set(comando.name, comando)
+}
+
 function Presence(){
     client.user.setPresence({
         status: "online",
