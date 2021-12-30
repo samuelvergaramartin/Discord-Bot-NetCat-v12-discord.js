@@ -108,9 +108,8 @@ module.exports = {
   const embed13 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos de juegos', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
-  //.addField('Comandos de conversación:', 'np!hola\nnp!bien-y-tu\nnp!denada\nnp!tengo-sueño\nnp!me-voy\nnp!buenas-noches\nnp!buenos-días\nnp!cómo-dormiste')
-  .setColor('ECFF00')
+  .addField('Comandos de juegos:', 'nc/name-personaje\nnc/name-personaje-hombre\nnc/name-personaje-mujer\nnc/roll')
+  .setColor('ff00d9')
   .setTimestamp()
   .setFooter(`• Bot creado por Sam170703#6466 | Pedido por ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}))
 
@@ -127,7 +126,7 @@ module.exports = {
 
   .setTitle("📖Comandos de NetCat📖: Menú de módulos")
   .setDescription("Para ver los comandos de cualquier módulo seleccione el módulo que desee ver en la barra de menú situada abajo de este mensaje.")
-  .addField('__📜Listado de módulos📜:__', ' -Comandos de conversación 🟢\n-Comandos de chistes 🟢\n-Comandos de diversión 🟢\n-Comandos de Gifs 🟢\n-Comandos de NSFW 🔴\n-Comandos de reacción 🟢\n-Comandos útiles 🟢\n-Comandos para hacer chuletas de exámenes de historia 🔴\n-Comandos de música 🟢\n-Comandos de configuración ​🟢\n-Comandos de economía 🔴\n-Comandos de moderación 🔴\n-Comandos de juegos 🔴\n-Comandos links NetCat 🟢')
+  .addField('__📜Listado de módulos📜:__', ' -Comandos de conversación 🟢\n-Comandos de chistes 🟢\n-Comandos de diversión 🟢\n-Comandos de Gifs 🟢\n-Comandos de NSFW 🔴\n-Comandos de reacción 🟢\n-Comandos útiles 🟢\n-Comandos para hacer chuletas de exámenes de historia 🔴\n-Comandos de música 🟢\n-Comandos de configuración ​🟢\n-Comandos de economía 🔴\n-Comandos de moderación 🔴\n-Comandos de juegos 🟢\n-Comandos links NetCat 🟢')
   .addField('Links de NetCat:', '[ link de invitación](https://discord.com/oauth2/authorize?client_id=900470345809674260&scope=bot&permissions=8) y [servidor oficial de NetCat](https://discord.gg/3Tfwk8QdmJ )')
   .setColor('ff00d9')
 
