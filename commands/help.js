@@ -40,7 +40,7 @@ module.exports = {
   const embed5 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos de NSFW', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
+  .addField('Comandos de NSFW:', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
   //.addField('Comandos de conversación:', 'np!hola\nnp!bien-y-tu\nnp!denada\nnp!tengo-sueño\nnp!me-voy\nnp!buenas-noches\nnp!buenos-días\nnp!cómo-dormiste')
   .setColor('ECFF00')
   .setTimestamp()
@@ -65,7 +65,7 @@ module.exports = {
   const embed8 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos para hacer chuletas de exámenes de historia', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
+  .addField('Comandos para hacer chuletas de exámenes de historia:', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
   //.addField('Comandos de conversación:', 'np!hola\nnp!bien-y-tu\nnp!denada\nnp!tengo-sueño\nnp!me-voy\nnp!buenas-noches\nnp!buenos-días\nnp!cómo-dormiste')
   .setColor('ECFF00')
   .setTimestamp()
@@ -90,7 +90,7 @@ module.exports = {
   const embed11 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos de economía', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
+  .addField('Comandos de economía:', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
   //.addField('Comandos de conversación:', 'np!hola\nnp!bien-y-tu\nnp!denada\nnp!tengo-sueño\nnp!me-voy\nnp!buenas-noches\nnp!buenos-días\nnp!cómo-dormiste')
   .setColor('ECFF00')
   .setTimestamp()
@@ -99,7 +99,7 @@ module.exports = {
   const embed12 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos de moderación', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
+  .addField('Comandos de moderación:', '⚠️ Módulo en mantenimiento, disculpen las molestias.⚠️')
   //.addField('Comandos de conversación:', 'np!hola\nnp!bien-y-tu\nnp!denada\nnp!tengo-sueño\nnp!me-voy\nnp!buenas-noches\nnp!buenos-días\nnp!cómo-dormiste')
   .setColor('ECFF00')
   .setTimestamp()
@@ -116,7 +116,7 @@ module.exports = {
   const embed14 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos links NetCat', 'nc/invite\nnc/support')
+  .addField('Comandos links NetCat:', 'nc/invite\nnc/support')
   .setColor('ff00d9')
   .setTimestamp()
   .setFooter(`• Bot creado por Sam170703#6466 | Pedido por ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}))
