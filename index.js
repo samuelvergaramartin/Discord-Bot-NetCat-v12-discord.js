@@ -94,7 +94,7 @@ function Presence(){
     client.user.setPresence({
         status: "online",
         activity: {
-            name: "nc/help | NetCat v3.2 | Estoy lista para la acción",
+            name: "nc/help | NetCat v3.4 | Estoy lista para la acción",
             type: "PLAYING",
         }
     })
