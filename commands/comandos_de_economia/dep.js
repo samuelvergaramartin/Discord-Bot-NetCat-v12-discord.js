@@ -42,7 +42,7 @@ module.exports = {
     dinero.restar(`${user.id}`, cantidad)
 
 
-   return message.channel.send(`Has depositado **${cantidad}**:coin: en el banco`)
+   return message.channel.send(`Has guardado **${cantidad}**:coin: en el banco`)
   }
 
   const dinerot = await dinero.obtener(`${user.id}`)
@@ -57,7 +57,7 @@ module.exports = {
   dinero.restar(`${user.id}`, cantidadd)
   banco.sumar(`${user.id}`, cantidadd)
 
-  message.channel.send(`Guardaste **${cantidadd}** monedas en el banco`)
-if(message.deletable) message.delete()
+  message.channel.send(`Has guardado **${cantidadd}**:coin: en el banco`)
+//if(message.deletable) message.delete()
     }
 }

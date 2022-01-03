@@ -32,7 +32,7 @@ module.exports = {
     .addField(`Total:`, `${cantidad + cantidad2}`)
     .setColor("RANDOM")
     .setFooter("Sistema de economía NetCat", "https://media.discordapp.net/attachments/819889697844101130/830479802905264128/latest.png?width=837&height=473");
-if(message.deletable) message.delete()
+//if(message.deletable) message.delete()
     message.channel.send(embed1)
 
     return;

@@ -58,6 +58,6 @@ module.exports = {
   dinero.sumar(`${user.id}`, cantidadd)
 
   message.channel.send(`Has sacado **${cantidadd}**:coin: del banco`)
-if(message.deletable) message.delete()
+//if(message.deletable) message.delete()
     }
 }
