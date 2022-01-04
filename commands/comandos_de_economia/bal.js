@@ -27,11 +27,11 @@ module.exports = {
 
     .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({format: "png"}))
     .setDescription(`:money_with_wings:**Global**`)
-    .addField(`Coins:`, `${cantidad}`)
-    .addField(`Banco:`, `${cantidad2}`)
-    .addField(`Total:`, `${cantidad + cantidad2}`)
+    .addField(`En tu cartera:`, `${cantidad}:coin:`)
+    .addField(`En el banco:`, `${cantidad2}:coin:`)
+    .addField(`En total:`, `${cantidad + cantidad2}:coin:`)
     .setColor("RANDOM")
-    .setFooter("Sistema de economía NetCat", "https://media.discordapp.net/attachments/819889697844101130/830479802905264128/latest.png?width=837&height=473");
+    .setFooter(`Sistema de economía NetCat`);
 //if(message.deletable) message.delete()
     message.channel.send(embed1)
 
