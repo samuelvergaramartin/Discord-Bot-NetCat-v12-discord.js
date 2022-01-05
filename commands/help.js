@@ -90,7 +90,7 @@ module.exports = {
   const embed11 = new Discord.MessageEmbed()
 
   .setTitle('📖Comandos de NetCat📖:')
-  .addField('Comandos de economía:', 'nc/bal\nnc/dep\nnc/with\nnc/work')
+  .addField('Comandos de economía:', 'nc/bal\nnc/buy\nnc/dep\nnc/mochila\nnc/rob\nnc/shop\nnc/with\nnc/work')
   .setColor('ff00d9')
   .setTimestamp()
   .setFooter(`• Bot creado por Sam170703#6466 | Pedido por ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}))
