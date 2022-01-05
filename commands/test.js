@@ -1,8 +1,8 @@
 const Discord = require ('discord.js');
 
 module.exports = {
-    name: "funciona",
+    name: "test",
     run: async (client, message, args) => {
-        message.channel.send('Gracias por su participación en esta prueba, miau miau🐱')
+        message.channel.send('Todo en orden')
     }
 }
