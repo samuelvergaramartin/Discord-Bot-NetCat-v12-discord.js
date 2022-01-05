@@ -97,6 +97,20 @@ for(var archi12 of archivos12) {
     client.comandos.set(comando.name, comando)
 }
 
+let archivos13 = fs.readdirSync('./commands/comandos_de_nsfw').filter((f) => f.endsWith('.js'))
+
+for(var archi13 of archivos13) {
+    let comando = require("./commands/comandos_de_nsfw/" + archi13)
+    client.comandos.set(comando.name, comando)
+}
+
+let archivos14 = fs.readdirSync('./commands/comandos_para_hacer_chuletas_de_examenes_de_historia').filter((f) => f.endsWith('.js'))
+
+for(var archi14 of archivos14) {
+    let comando = require("./commands/comandos_para_hacer_chuletas_de_examenes_de_historia/" + archi14)
+    client.comandos.set(comando.name, comando)
+}
+
 function Presence(){
     client.user.setPresence({
         status: "online",
