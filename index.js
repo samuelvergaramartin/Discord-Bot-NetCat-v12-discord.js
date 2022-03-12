@@ -180,7 +180,7 @@ if(message.channel.type === "dm") return;
             let embed = new Discord.MessageEmbed()
                 .setTitle('Plantilla del menú de comandos de NetCat')
                 .setDescription('Aquí irá la descripción del menú de comandos')
-                .addField('Y aquí irá el listado de comandos', 'comando 1\ncomando 2\ncomando 3\ncomando 4...')
+                .addField('Y aquí irá el listado de comandos', 'comando 1\ncomando 2\ncomando 3\ncomando 4....')
                 .setColor('ff00d9')
                 .setFooter('Y aquí el pie de página, #Mariolatenpiedad')
 
