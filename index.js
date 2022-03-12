@@ -171,7 +171,7 @@ if(message.channel.type === "dm") return;
     } 
     switch(command) {
         case "prueba-2":
-            message.channel.send('Prueba de salto de línea\nprueba del comando número 2\n🟢todo correcto')
+            message.channel.send('Prueba de salto de línea\nprueba del comando número 2\n🟢todo correcto.')
             break;
     }
     switch(command) {
